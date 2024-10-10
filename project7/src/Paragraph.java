@@ -10,10 +10,11 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Paragraph {
-    private List<String> sentences = new ArrayList<>();
+    private List<Sentence> sentences = new ArrayList<>();
 
     public void addASentence(String theText) {
-        sentences.add(theText);
+        Sentence tmp = new Sentence(theText);
+        sentences.add(tmp);
     }
 
     public void print() {

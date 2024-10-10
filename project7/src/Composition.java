@@ -12,18 +12,22 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Composition {
-    private List<String> paragraphs = new ArrayList<>();
-    private int currentParagraph = 0;
+    private List<Paragraph> paragraphs = new ArrayList<>();
+    private int currentParagraph = -1;
 
 
     public void addAParagraph() {
-        paragraphs.add("");
+        Paragraph tmp = new Paragraph();
+        paragraphs.add(tmp);
         currentParagraph++;
     }
     
     public void addASentence(String aSentence) {
-        paragraphs.set(currentParagraph, paragraphs.get(currentParagraph) + " " + aSentence);
+        Paragraph current = paragraphs.get(currentParagraph);
+        current.addASentence(aSentence);
     }
 
-
+    public void print() {
+        
+    }
 }
