@@ -19,9 +19,8 @@ public class Paragraph {
 
     public void print() {
         for (int i = 0; i < sentences.size(); i++) {
-            System.out.printf("%s ", sentences.get(i));
+            sentences.get(i).print();
         }
-        System.out.println();
     }
 
 }

@@ -10,7 +10,7 @@ public class Drive {
         Composition comp = new Composition();
         comp.addAParagraph();
         comp.addASentence("test");
-        
+        comp.print();
     }
 
 

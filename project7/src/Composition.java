@@ -28,6 +28,8 @@ public class Composition {
     }
 
     public void print() {
-        
+        for (int i = 0; i < paragraphs.size(); i++) {
+            paragraphs.get(i).print();
+        }
     }
 }
