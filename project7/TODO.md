@@ -1,32 +1,34 @@
-Code Files:
-- [ ] Composition
-  - [ ] bug fix
-  - [x] Private vars
-    - [x] ArrayList of Paragraphs
-    - [x] Int currentParagraph
-  - [x] Methods
-    - [x] void addAParagraph()
-    - [x] void addASentence(String aSentence)
-    - [x] void print()
-- [ ] Paragraph
-  - [ ] bug fix
-  - [x] Private vars
-    - [x] ArrayList of Sentences
-  - [x] Methods
-    - [x] void addASentence(String theText)
-    - [x] void print()
-- [ ] Sentence
-  - [ ] bug fix
-  - [x] Private vars
-    - [x] String theSentence
-  - [x] Methods
-    - [x] Sentence(String inputSentence)
-    - [x] void print(String theText)
-- [ ] Drive
-  - [ ] bug fix
-  - [ ] Methods
-    - [ ] public static void main(String[] args)
-    - [ ] void printMenu()
-    - [ ] int userMenuInput()
-  - [ ] Save user strings to composition
-  - [ ] print out composition when asked
+- [ ] Code
+  - [ ] Composition
+    - [ ] bug fix
+    - [x] Private vars
+      - [x] ArrayList of Paragraphs
+      - [x] Int currentParagraph
+    - [x] Methods
+      - [x] void addAParagraph()
+      - [x] void addASentence(String aSentence)
+      - [x] void print()
+  - [ ] Paragraph
+    - [ ] bug fix
+    - [x] Private vars
+      - [x] ArrayList of Sentences
+    - [x] Methods
+      - [x] void addASentence(String theText)
+      - [x] void print()
+  - [ ] Sentence
+    - [ ] bug fix
+    - [x] Private vars
+      - [x] String theSentence
+    - [x] Methods
+      - [x] Sentence(String inputSentence)
+      - [x] void print(String theText)
+  - [ ] Drive
+    - [ ] bug fix
+    - [ ] Methods
+      - [ ] public static void main(String[] args)
+      - [ ] void printMenu()
+      - [ ] int userMenuInput()
+    - [ ] Save user strings to composition
+    - [ ] print out composition when asked
+
+- [ ] Presentation
