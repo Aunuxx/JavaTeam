@@ -1,17 +1,39 @@
-// Driver: This file is the test driver. It contains main(), which drives the creation of the menu as well as collecting the user’s choice.
-// It creates one instance of the Composition class and ONLY interfaces with it (only uses the accessing
-// methods which have been made public in Composition). It does not need to know anything about the
-// Paragraph or Sentence classes. In fact, if there were references to those classes, it would be a mistake.
-
+import java.util.Scanner;
 
 public class Drive {
 
-    public static void main(String[] args) {
-        Composition comp = new Composition();
-        comp.addAParagraph();
-        comp.addASentence("test");
-        comp.print();
+    public static void printMenu() {
+        System.out.println("This program allows a user to enter a written composition in pieces: ");
+        System.out.println("1. Enter a new sentence.");
+        System.out.println("2. Start a new paragraph.");
+        System.out.println("3. Print the composition.");
+        System.out.println("4. Quit.");
+        System.out.print("Your menu selection is: ");
     }
 
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        Composition comp = new Composition();
+        boolean done = false;
 
+        while (!done) {
+            printMenu();
+            int menuChoice = scnr.nextInt();
+
+            if (menuChoice == 1) {
+                System.out.println("Type a sentence, then press ENTER;");
+                String sentence = scnr.nextLine();
+                comp.addASentence(sentence);
+            }
+            else if (menuChoice == 2) {
+                comp.addAParagraph();
+            }
+            else if (menuChoice == 3) {
+                comp.print();
+            }
+            else if (menuChoice == 4) {
+                done = true;
+            }
+        }
+    }
 }
