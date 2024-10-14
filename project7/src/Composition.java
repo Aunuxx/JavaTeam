@@ -23,6 +23,9 @@ public class Composition {
     }
     
     public void addASentence(String aSentence) {
+        if (currentParagraph == -1) {
+            addAParagraph();
+        }
         Paragraph current = paragraphs.get(currentParagraph);
         current.addASentence(aSentence);
     }
