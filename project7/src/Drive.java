@@ -22,6 +22,7 @@ public class Drive {
 
             if (menuChoice == 1) {
                 System.out.println("Type a sentence, then press ENTER;");
+                scnr.nextLine();
                 String sentence = scnr.nextLine();
                 comp.addASentence(sentence);
             }
