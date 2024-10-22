@@ -1,10 +1,10 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class DetermineRent
 {
     public static void main(String args[]) 
     {
-        Scanner s = new Scanner(System.in);
+        // Scanner s = new Scanner(System.in);
         // Declare variables.
         double rent[][] =    {{350, 390, 435}, 
                     {400, 440, 480},
@@ -15,21 +15,29 @@ public class DetermineRent
         int bedroom;
         String floorString;
         String bedroomString;
-        int QUIT = 99;
-                
-        // Work done in the getReady() method
-        floorString = JOptionPane.showInputDialog(
-                                "Enter floor or 99 to quit: ");
-        floor = Integer.parseInt(floorString);
+        final int QUIT = 99;
         
+        // Work done in the getReady() method
+        
+        floorString = JOptionPane.showInputDialog("Enter floor or 99 to quit: ");
+        floor = Integer.parseInt(floorString);
+
         while(floor != QUIT)
         {    
-            // Fill in code here to determine rent based on the floor and bedroom.
+            bedroomString = JOptionPane.showInputDialog("Enter bedroom: ");
+            bedroom = Integer.parseInt(bedroomString);
+            
+            // System.out.println("Rent is $" + rent[floor][bedroom]);
+            JOptionPane.showMessageDialog(null, "Rent is $" + rent[floor][bedroom]);
 
-            System.out.println("Rent is $" + rent[floor][bedroom]);
+
+            floorString = JOptionPane.showInputDialog("Enter floor or 99 to quit: ");
+            floor = Integer.parseInt(floorString);
         }
+        // s.close();
+
         // Work done in the finish() method
-        System.out.println("End of program");
+        // System.out.println("End of program");
         System.exit(0);
     } // End of main() method.
 } // End of DetermineRent class.
