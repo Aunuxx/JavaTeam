@@ -25,10 +25,28 @@ public class DemographicInfo {
     
 
     public DemographicInfo(String record) {
-
+        setAll(record);
     }
 
     public void setAll(String record) {
+        String[] splits = new String[10];
+        splits = record.split(",");
         
+        firstName = splits[0];
+        lastName = splits[1];
+        age = Integer.parseInt(splits[2]);
+        sex = splits[3];
+        maritalStatus = splits[4];
+        occupation = splits[5];
+        streetAddress = splits[6];
+        city = splits[7];
+        state = splits[8];
+        zipCode = Integer.parseInt(splits[9]);
+    }
+
+    public void printInfoShort() {
+        //                        ln    fn  age sex ms  occ  addr city state zip
+        System.out.printf("%10s %10s %4d %8s %8s %22s %20s %15s %5s %6d %n",
+        lastName, firstName, age, sex, maritalStatus, occupation ,streetAddress, city, state, zipCode);
     }
 }

@@ -20,7 +20,28 @@ public class DemographicNode {
 
 
     public DemographicNode(String aRecord) {
-        
+        demographic = new DemographicInfo(aRecord);
+    }
+    public DemographicNode(String aRecord, DemographicNode prev) { // I added this because I thought it might be usefull.
+        demographic = new DemographicInfo(aRecord);
+        previousNodeRef = prev;
+    }
+
+    public void printNodeData() {
+        demographic.printInfoShort();
+    }
+
+    public DemographicNode getPrev() {
+        return previousNodeRef;
+    }
+    public DemographicNode getnext() {
+        return nextNodeRef;
+    }
+    public void setPrev(DemographicNode prev) {
+        previousNodeRef = prev;
+    }
+    public void setNext(DemographicNode next) {
+        previousNodeRef = next;
     }
     
 }
