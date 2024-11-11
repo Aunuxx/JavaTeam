@@ -13,31 +13,30 @@ public class Person {
     protected int phoneNumber;
 
 
-    public Person() {
-        fname = null;
-        lname = null;
-        addr = null;
-        zip = -1;
-        phoneNumber = -1;
-    }
-
-
     public void input() {
         Scanner scnr = new Scanner(System.in);
-        dialogBox("test");
+        String uIn;
+        System.out.print("First name: ");
+        uIn = scnr.next();
+        fname = uIn;
+        System.out.print("Last name: ");
+        uIn = scnr.next();
+        lname = uIn;
+        System.out.print("Address: ");
+        uIn = scnr.next();
+        addr = uIn;
+        System.out.print("Zip code: ");
+        uIn = scnr.next();
+        zip = Integer.valueOf(uIn);
+        System.out.print("Phone number: ");
+        uIn = scnr.next();
+        phoneNumber = Integer.valueOf(uIn);
 
         scnr.close();
     }
-    private void dialogBox(String inside) {
-        System.out.println("+------------------+");
-        System.out.println("|                  |");
-        System.out.printf("|%18.18s|",inside);
-        System.out.println("|                  |");
-        System.out.println("+------------------+");
-    }
 
     public void printInfo() {
-        System.out.printf("%s, %s %s %d %d", lname, fname, addr, zip, phoneNumber);
+        System.out.printf("%s %s %s %d %d%n", fname, lname, addr, zip, phoneNumber);
     }
 
 }
