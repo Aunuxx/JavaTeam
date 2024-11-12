@@ -1,15 +1,17 @@
+// Faculty descends from CollegeEmployee.
+// This class also includes a Boolean field that indicates whether
+// the Faculty member is tenured, as well as methods that override
+// the CollegeEmployee methods to accept and display this additional
+// piece of information.
+
+
 package capstone;
-// CollegeEmployee descends from Person.
-// A CollegeEmployee also includes a Social Security number, an annual salary, and a department name
-// as well as methods that override the Person methods to accept and display all CollegeEmployee data.
 
 import java.util.Scanner;
 
-public class CollegeEmployee extends Person {
+public class Faculty extends CollegeEmployee  {
+    protected boolean tenured;
 
-    protected int ssn;
-    protected int salary;
-    protected String department;
 
     public void input() {
         Scanner scnr = new Scanner(System.in);
@@ -48,12 +50,15 @@ public class CollegeEmployee extends Person {
         uIn = scnr.next();
         department = uIn;
 
+        System.out.print("Tenured: ");
+        uIn = scnr.next();
+        tenured = Boolean.valueOf(uIn);
+
         scnr.close();
     }
 
     public void printInfo() {
-        System.out.printf("%s %s %s %d %d %d %d %s%n",
-            fname, lname, addr, zip, phoneNumber, ssn, salary, department);
+        System.out.printf("%s %s %s %d %d %d %d %s %b%n",
+            fname, lname, addr, zip, phoneNumber, ssn, salary, department, tenured);
     }
-
 }
