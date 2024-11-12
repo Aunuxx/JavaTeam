@@ -10,7 +10,7 @@ public class Person {
     protected String lname;
     protected String addr;
     protected int zip;
-    protected int phoneNumber;
+    protected long phoneNumber;
 
 
     public void input() {
@@ -23,16 +23,16 @@ public class Person {
         uIn = scnr.next();
         lname = uIn;
         System.out.print("Address: ");
-        uIn = scnr.next();
+        scnr.nextLine();
+        uIn = scnr.nextLine();
         addr = uIn;
         System.out.print("Zip code: ");
         uIn = scnr.next();
         zip = Integer.valueOf(uIn);
         System.out.print("Phone number: ");
         uIn = scnr.next();
-        phoneNumber = Integer.valueOf(uIn);
+        phoneNumber = Long.valueOf(uIn);
 
-        scnr.close();
     }
 
     public void printInfo() {
