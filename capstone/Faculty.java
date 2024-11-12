@@ -40,7 +40,7 @@ public class Faculty extends CollegeEmployee  {
 
         System.out.print("Social Security number: ");
         uIn = scnr.next();
-        ssn = Integer.valueOf(uIn);
+        ssn = uIn;
 
         System.out.print("Salary: ");
         uIn = scnr.next();
