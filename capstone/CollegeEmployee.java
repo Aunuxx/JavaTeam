@@ -5,45 +5,28 @@ package capstone;
 
 import java.util.Scanner;
 
+
 public class CollegeEmployee extends Person {
 
-    private int ssn;
+    private String ssn;
     private int salary;
     private String department;
 
+    @Override
     public void input() {
-        Scanner scnr = new Scanner(System.in);
+        super.input();
         String uIn;
 
-        System.out.print("First name: ");
-        uIn = scnr.next();
-        fname = uIn;
-
-        System.out.print("Last name: ");
-        uIn = scnr.next();
-        lname = uIn;
-
-        System.out.print("Address: ");
-        uIn = scnr.next();
-        addr = uIn;
-
-        System.out.print("Zip code: ");
-        uIn = scnr.next();
-        zip = Integer.valueOf(uIn);
-
-        System.out.print("Phone number: ");
-        uIn = scnr.next();
-        phoneNumber = Integer.valueOf(uIn);
-
+        Scanner scnr = new Scanner(System.in);
 
         System.out.print("Social Security number: ");
         uIn = scnr.next();
-        ssn = Integer.valueOf(uIn);
+        ssn = uIn;
 
         System.out.print("Salary: ");
         uIn = scnr.next();
         salary = Integer.valueOf(uIn);
-        
+
         System.out.print("Department: ");
         uIn = scnr.next();
         department = uIn;
@@ -52,8 +35,8 @@ public class CollegeEmployee extends Person {
     }
 
     public void printInfo() {
-        System.out.printf("%s %s %s %d %d %d %d %s%n",
-            fname, lname, addr, zip, phoneNumber, ssn, salary, department);
+        System.out.printf("%s %s %s %d %d %s %d %s%n",
+                fname, lname, addr, zip, phoneNumber, ssn, salary, department);
     }
 
 }
