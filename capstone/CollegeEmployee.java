@@ -31,7 +31,6 @@ public class CollegeEmployee extends Person {
         uIn = scnr.next();
         department = uIn;
 
-        scnr.close();
     }
 
     public void printInfo() {
