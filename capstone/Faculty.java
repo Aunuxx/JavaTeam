@@ -14,10 +14,10 @@ public class Faculty extends CollegeEmployee  {
 
 
     public void input() {
+        super.input();
+
         Scanner scnr = new Scanner(System.in);
         String uIn;
-
-        super.input();
 
         System.out.print("Tenured: ");
         uIn = scnr.next();

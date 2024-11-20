@@ -16,6 +16,7 @@ public class Person {
     public void input() {
         Scanner scnr = new Scanner(System.in);
         String uIn;
+        
         System.out.print("First name: ");
         uIn = scnr.next();
         fname = uIn;

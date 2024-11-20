@@ -16,21 +16,18 @@ public class Student extends Person {
     protected double gpa;
 
     public void input() {
+        super.input();
+        
         Scanner scnr = new Scanner(System.in);
         String uIn;
 
-        super.input();
-
-
         System.out.print("Major: ");
-        scnr.nextLine();
         uIn = scnr.nextLine();
         major = uIn;
 
         System.out.print("GPA: ");
         uIn = scnr.next();
         gpa = Double.valueOf(uIn);
-
 
     }
 
