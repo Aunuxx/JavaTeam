@@ -15,33 +15,16 @@ public class Student extends Person {
     protected String major;
     protected double gpa;
 
-        public void input() {
+    public void input() {
         Scanner scnr = new Scanner(System.in);
         String uIn;
 
-        System.out.print("First name: ");
-        uIn = scnr.next();
-        fname = uIn;
-
-        System.out.print("Last name: ");
-        uIn = scnr.next();
-        lname = uIn;
-
-        System.out.print("Address: ");
-        uIn = scnr.next();
-        addr = uIn;
-
-        System.out.print("Zip code: ");
-        uIn = scnr.next();
-        zip = Integer.valueOf(uIn);
-
-        System.out.print("Phone number: ");
-        uIn = scnr.next();
-        phoneNumber = Integer.valueOf(uIn);
+        super.input();
 
 
         System.out.print("Major: ");
-        uIn = scnr.next();
+        scnr.nextLine();
+        uIn = scnr.nextLine();
         major = uIn;
 
         System.out.print("GPA: ");
@@ -49,11 +32,10 @@ public class Student extends Person {
         gpa = Double.valueOf(uIn);
 
 
-        scnr.close();
     }
 
     public void printInfo() {
         System.out.printf("%s %s %s %d %d %s %.2f%n",
-        fname, lname, addr, zip, phoneNumber, major, gpa);
+                fname, lname, addr, zip, phoneNumber, major, gpa);
     }
 }
