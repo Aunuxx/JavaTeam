@@ -26,7 +26,7 @@ public class Faculty extends CollegeEmployee  {
     }
 
     public void printInfo() {
-        System.out.printf("%s %s %s %d %d %s %d %s %b%n",
+        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d | %10s | %6d | %20s | %5b |%n",
                 fname, lname, addr, zip, phoneNumber, ssn, salary, department, tenured);
     }
 }

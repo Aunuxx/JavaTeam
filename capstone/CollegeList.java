@@ -17,18 +17,24 @@ public class CollegeList {
 
     public static void printArray(CollegeEmployee[] array, int count) {
         System.out.println("Collage Employees:");
+        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %10s | %6s | %20s |%n",
+            "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department");
         for (int i = 0; i < count; i++) {
             array[i].printInfo();
         }
     }
     public static void printArray(Faculty[] array, int count) {
         System.out.println("Faculty:");
+        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %10s | %6s | %20s | %5s |%n",
+        "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department", "Tenured");
         for (int i = 0; i < count; i++) {
             array[i].printInfo();
         }
     }
     public static void printArray(Student[] array, int count) {
         System.out.println("Students:");
+        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %15s | %4s |%n",
+        "First Name", "Last Name", "Address", "ZIP", "Phone Number", "Major", "GPA");
         for (int i = 0; i < count; i++) {
             array[i].printInfo();
         }
@@ -47,19 +53,34 @@ public class CollegeList {
 
             switch (input) {
                 case "C":
-                    collegeEmployees[c] = new CollegeEmployee();
-                    collegeEmployees[c].input();
-                    c++;
+                    try {
+                        collegeEmployees[c] = new CollegeEmployee();
+                        collegeEmployees[c].input();
+                        c++;
+                    }
+                    catch (Exception ex) {
+                        System.out.println("Limit reached for Employees");
+                    }
                     break;
                 case "F":
-                    faculties[f] = new Faculty();
-                    faculties[f].input();
-                    f++;
+                    try {
+                        faculties[f] = new Faculty();
+                        faculties[f].input();
+                        f++;
+                    }
+                    catch (Exception ex) {
+                        System.out.println("Limit reached for Faculty");
+                    }
                     break;
                 case "S":
-                    students[s] = new Student();
-                    students[s].input();
-                    s++;
+                    try {
+                        students[s] = new Student();
+                        students[s].input();
+                        s++;
+                    }
+                    catch (Exception ex) {
+                        System.out.println("Limit reached for Students");
+                    }
                     break;
             
                 default:

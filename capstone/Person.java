@@ -37,7 +37,7 @@ public class Person {
     }
 
     public void printInfo() {
-        System.out.printf("%s %s %s %d %d%n", fname, lname, addr, zip, phoneNumber);
+        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d |%n", fname, lname, addr, zip, phoneNumber);
     }
 
 }

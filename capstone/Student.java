@@ -32,7 +32,7 @@ public class Student extends Person {
     }
 
     public void printInfo() {
-        System.out.printf("%s %s %s %d %d %s %.2f%n",
+        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d | %15s | %4.2f |%n",
                 fname, lname, addr, zip, phoneNumber, major, gpa);
     }
 }
