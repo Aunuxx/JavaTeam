@@ -34,7 +34,7 @@ public class DemographicNode {
     public DemographicNode getPrev() {
         return previousNodeRef;
     }
-    public DemographicNode getnext() {
+    public DemographicNode getNext() {
         return nextNodeRef;
     }
     public void setPrev(DemographicNode prev) {
