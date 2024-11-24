@@ -1,4 +1,5 @@
 package capstone;
+
 import java.util.Scanner;
 
 public class CollegeList {
@@ -16,28 +17,41 @@ public class CollegeList {
 
 
     public static void printArray(CollegeEmployee[] array, int count) {
-        System.out.println("Collage Employees:");
-        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %10s | %6s | %20s |%n",
-            "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department");
-        for (int i = 0; i < count; i++) {
-            array[i].printInfo();
+        System.out.println("College Employees:");
+        System.out.printf("| %-15s | %-15s | %-30s | %-6s | %-12s | %-10s | %-6s | %-20s |%n",
+                "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department");
+        if (count > 0) {
+            for (int i = 0; i < count; i++) {
+                array[i].printInfo();
+            }
+        } else {
+            System.out.println("There are no college employees");
         }
     }
     public static void printArray(Faculty[] array, int count) {
         System.out.println("Faculty:");
-        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %10s | %6s | %20s | %5s |%n",
-        "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department", "Tenured");
-        for (int i = 0; i < count; i++) {
-            array[i].printInfo();
+        System.out.printf("| %-15s | %-15s | %-30s | %-6s | %-12s | %-10s | %-6s | %-20s | %-5s |%n",
+                "First Name", "Last Name", "Address", "ZIP", "Phone Number", "SSN", "Salary", "Department", "Tenured");
+        if (count > 0) {
+            for (int i = 0; i < count; i++) {
+                array[i].printInfo();
+            }
+        } else {
+            System.out.println("There are no faculty");
         }
     }
     public static void printArray(Student[] array, int count) {
         System.out.println("Students:");
-        System.out.printf("\t| %15s | %15s | %30s | %6s | %12s | %15s | %4s |%n",
-        "First Name", "Last Name", "Address", "ZIP", "Phone Number", "Major", "GPA");
-        for (int i = 0; i < count; i++) {
-            array[i].printInfo();
+        System.out.printf("| %-15s | %-15s | %-30s | %-6s | %-12s | %-30s | %-4s |%n",
+                "First Name", "Last Name", "Address", "ZIP", "Phone Number", "Major", "GPA");
+        if (count > 0) {
+            for (int i = 0; i < count; i++) {
+                array[i].printInfo();
+            }
+        } else {
+            System.out.println("There are no students");
         }
+
     }
 
     public static void main(String[] args) {
@@ -82,7 +96,7 @@ public class CollegeList {
                         System.out.println("Limit reached for Students");
                     }
                     break;
-            
+
                 default:
                     System.out.println("Invalid option: "+input);
                     break;
@@ -94,11 +108,11 @@ public class CollegeList {
             input = scnr.nextLine();
         }
 
+        
+            printArray(collegeEmployees, c);
+            printArray(faculties, f);
+            printArray(students, s);
 
-
-        printArray(collegeEmployees, c);
-        printArray(faculties, f);
-        printArray(students, s);
 
 
 
