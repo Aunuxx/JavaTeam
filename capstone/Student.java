@@ -16,10 +16,11 @@ public class Student extends Person {
     protected double gpa;
 
     public void input() {
-        super.input();
-        
         Scanner scnr = new Scanner(System.in);
         String uIn;
+
+        super.input();
+
 
         System.out.print("Major: ");
         uIn = scnr.nextLine();
@@ -29,10 +30,12 @@ public class Student extends Person {
         uIn = scnr.next();
         gpa = Double.valueOf(uIn);
 
+
     }
 
     public void printInfo() {
-        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d | %15s | %4.2f |%n",
-                fname, lname, addr, zip, phoneNumber, major, gpa);
+        super.printInfo();
+        System.out.printf("%-32s %-4.2f%n",
+                major, gpa);
     }
 }
