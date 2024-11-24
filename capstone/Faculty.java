@@ -14,10 +14,10 @@ public class Faculty extends CollegeEmployee  {
 
 
     public void input() {
-        super.input();
-
         Scanner scnr = new Scanner(System.in);
         String uIn;
+
+        super.input();
 
         System.out.print("Tenured: ");
         uIn = scnr.next();
@@ -26,7 +26,8 @@ public class Faculty extends CollegeEmployee  {
     }
 
     public void printInfo() {
-        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d | %10s | %6d | %20s | %5b |%n",
-                fname, lname, addr, zip, phoneNumber, ssn, salary, department, tenured);
+        super.printInfo();
+        System.out.printf("%b%n",
+                tenured);
     }
 }
