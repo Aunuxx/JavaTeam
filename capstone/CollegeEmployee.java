@@ -34,8 +34,9 @@ public class CollegeEmployee extends Person {
     }
 
     public void printInfo() {
-        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d | %10s | %6d | %20s |%n",
-                fname, lname, addr, zip, phoneNumber, ssn, salary, department);
+        super.printInfo();
+        System.out.printf("%-13s %-7d %-23s",
+                ssn, salary, department);
     }
 
 }
