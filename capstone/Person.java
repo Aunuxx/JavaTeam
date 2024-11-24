@@ -3,6 +3,7 @@
 // and a display method that displays all of a Person’s information on a single line at the command line on the screen.
 
 package capstone;
+
 import java.util.Scanner;
 
 public class Person {
@@ -16,7 +17,6 @@ public class Person {
     public void input() {
         Scanner scnr = new Scanner(System.in);
         String uIn;
-        
         System.out.print("First name: ");
         uIn = scnr.next();
         fname = uIn;
@@ -37,7 +37,8 @@ public class Person {
     }
 
     public void printInfo() {
-        System.out.printf("\t| %15s | %15s | %30s | %6d | %12d |%n", fname, lname, addr, zip, phoneNumber);
+        System.out.printf("%-18s %-17s %-32s %-8d %-15d",
+                fname, lname, addr, zip, phoneNumber);
     }
 
 }
